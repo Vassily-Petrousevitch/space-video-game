@@ -9,9 +9,9 @@ public class Ship
         // need png
     }
 
-    public void testFunction() 
+    public String testFunction() 
     {
-        Console.WriteLine("This works");
+        return "This works";
     }
 }
 
