@@ -2,18 +2,22 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace space_video_game;
+namespace SpaceGame;
 
-public class Game1 : Game
+public class GameRoot : Game
 {
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
 
-    public Game1()
+    Ship player1;
+
+    public GameRoot()
     {
         _graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
+
+        player1 = new Ship();
     }
 
     protected override void Initialize()
@@ -36,13 +40,14 @@ public class Game1 : Game
             Exit();
 
         // TODO: Add your update logic here
+        
 
         base.Update(gameTime);
     }
 
     protected override void Draw(GameTime gameTime)
     {
-        GraphicsDevice.Clear(Color.CornflowerBlue);
+        GraphicsDevice.Clear(Color.Black);
 
         // TODO: Add your drawing code here
 

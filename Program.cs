@@ -1,3 +1,8 @@
 ﻿
-using var game = new space_video_game.Game1();
+using SpaceGame;
+
+
+// RUN THE GAME 
+var game = new GameRoot();
 game.Run();
+
